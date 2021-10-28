@@ -1,2 +1,2 @@
 # PigeonWorkshop
-PigeonWorkshop Frontend
+ code for PigeonWorkshop.com
