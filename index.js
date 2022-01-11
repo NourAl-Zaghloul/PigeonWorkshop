@@ -1,5 +1,5 @@
 let projects = [
-    {name: 'Activity Logger', url: "https://www.pigeonworkshop.com/activityLogger"}
+    {name: 'Activity Logger', url: "activityLogger.pigeonworkshop.com/"}
 ]
 
 let iframe = document.getElementById('preview');
