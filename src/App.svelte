@@ -104,11 +104,31 @@
 	}
 	
 	function getDate(){
-		let newTime = new Date();
-		newTime = newTime.toISOString();
-		newTime = newTime.match(/.*(?=T)/)[0];
-		return newTime
-	}
+    let todaysDate = new Date();
+    let todaysDate_formatted = {
+        Millisecond: `${todaysDate.getMilliseconds()}`,
+        Second: todaysDate.getSeconds() < 10 ? `0${todaysDate.getSeconds()}` : `${todaysDate.getSeconds()}`,
+        Minute: todaysDate.getMinutes() < 10 ? `0${todaysDate.getMinutes()}` : `${todaysDate.getMinutes()}`,
+        Hour: todaysDate.getHours() < 10 ? `0${todaysDate.getHours()}` : `${todaysDate.getHours()}`,
+        Day: todaysDate.getDate() < 10 ? `0${todaysDate.getDate()}` : `${todaysDate.getDate()}`,
+        Month: todaysDate.getMonth() < 9 ? `0${todaysDate.getMonth()+1}` : `${todaysDate.getMonth()+1}`, // I hate that months are zero indexed but nothing else is...
+        Year: `${todaysDate.getFullYear()}`,
+    }
+    switch(true){
+        case todaysDate.getTimezoneOffset()>0:
+            todaysDate_formatted.timzoneOffset = todaysDate.getTimezoneOffset()/60 < 10 ? `-0${todaysDate.getTimezoneOffset()/60}` : `-${todaysDate.getTimezoneOffset()/60}`;
+            break;
+        case todaysDate.getTimezoneOffset()<0:
+            todaysDate_formatted.timzoneOffset = -todaysDate.getTimezoneOffset()/60 < 10 ? `+0${-todaysDate.getTimezoneOffset()/60}` : `+${-todaysDate.getTimezoneOffset()/60}`;
+            break;
+        case todaysDate.getTimezoneOffset()===0:
+            todaysDate_formatted.timzoneOffset = 'Z';
+            break;
+    }
+
+    return `${todaysDate_formatted.Year}-${todaysDate_formatted.Month}-${todaysDate_formatted.Day}`;
+
+}
 	
 	function msToTime(duration) {
   	var milliseconds = Math.floor((duration % 1000) / 100),
