@@ -1,12 +1,14 @@
 :root {
-    --light-background: #fff1d0;
-    --dark-background: #1a1305;
-    --light-a: #FC6DAB;/* FC6DAB */
-    --light-b: #3FDE9F; /* 99EDCC */
-    --light-c: #539BF3; /* 9AC4F8 */
-    --dark-a: #801a46;/* FC6DAB */
-    --dark-b: #1a8057; /* 99EDCC */
-    --dark-c: #1a4680; /* 9AC4F8 */
+    --light-background: hsl(48, 100%, 96%);
+    --dark-background: hsl(48, 66%, 4%);
+    --light-a: hsl(333, 96%, 66%);/* FC6DAB */
+    --light-b: hsl(160, 96%, 66%); /* 99EDCC */
+    --light-c: hsl(216, 96%, 66%); /* 9AC4F8 */
+    --light-d: #fff;
+    --dark-a: hsl(333, 66%, 33%);/* FC6DAB */
+    --dark-b: hsl(160, 66%, 33%); /* 99EDCC */
+    --dark-c: hsl(216, 66%, 33%); /* 9AC4F8 */
+    --dark-d: #000;
 }
 
 .theme-light {
@@ -41,27 +43,26 @@ html {
     font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
-h1 {
+h1, button, select, input {
     color: var(--primary-true);
 }
 
 h2, h3, h4 {
     color: var(--secondary-true);
+    border-color: var(--secondary-true);
 }
 
-button, label, p {
+label, p {
     color: var(--accent-true);
 }
 
 button, select {
-    color: var(--accent-true);
-    border-color: var(--accent-true);
     background-color: var(--background-true);
 }
 
 button:hover, button:focus, select:hover, select:focus {
-    color: var(--accent-inverse);
-    border-color: var(--accent-inverse);
+    color: var(--primary-inverse);
+    border-color: var(--primary-inverse);
     background-color: var(--background-inverse);
 }
 
