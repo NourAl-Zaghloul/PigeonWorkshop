@@ -1,12 +1,12 @@
 :root {
     --light-background: #fff1d0;
-    --dark-background: #000000;
+    --dark-background: #1a1305;
     --light-a: #FC6DAB;/* FC6DAB */
     --light-b: #3FDE9F; /* 99EDCC */
     --light-c: #539BF3; /* 9AC4F8 */
-    --dark-a: #FC6DAB;/* FC6DAB */
-    --dark-b: #3FDE9F; /* 99EDCC */
-    --dark-c: #539BF3; /* 9AC4F8 */
+    --dark-a: #801a46;/* FC6DAB */
+    --dark-b: #1a8057; /* 99EDCC */
+    --dark-c: #1a4680; /* 9AC4F8 */
 }
 
 .theme-light {
@@ -38,16 +38,108 @@ html {
     margin: 0;
     text-align: center;
     background-color: var(--background-true);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
 h1 {
     color: var(--primary-true);
 }
 
-h2, h3, h4, p, button {
+h2, h3, h4 {
     color: var(--secondary-true);
 }
 
-button {
+button, label, p {
+    color: var(--accent-true);
+}
+
+button, select {
+    color: var(--accent-true);
     border-color: var(--accent-true);
+    background-color: var(--background-true);
+}
+
+button:hover, button:focus, select:hover, select:focus {
+    color: var(--accent-inverse);
+    border-color: var(--accent-inverse);
+    background-color: var(--background-inverse);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* atkinson-hyperlegible-regular - latin */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/atkinson-hyperlegible-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/atkinson-hyperlegible-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/atkinson-hyperlegible-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/atkinson-hyperlegible-v7-latin-regular.svg#AtkinsonHyperlegible') format('svg'); /* Legacy iOS */
+}
+/* atkinson-hyperlegible-italic - latin */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/atkinson-hyperlegible-v7-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/atkinson-hyperlegible-v7-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/atkinson-hyperlegible-v7-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v7-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v7-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/atkinson-hyperlegible-v7-latin-italic.svg#AtkinsonHyperlegible') format('svg'); /* Legacy iOS */
+}
+/* atkinson-hyperlegible-700 - latin */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/atkinson-hyperlegible-v7-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/atkinson-hyperlegible-v7-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/atkinson-hyperlegible-v7-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v7-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v7-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/atkinson-hyperlegible-v7-latin-700.svg#AtkinsonHyperlegible') format('svg'); /* Legacy iOS */
+}
+/* atkinson-hyperlegible-700italic - latin */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/atkinson-hyperlegible-v7-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/atkinson-hyperlegible-v7-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/atkinson-hyperlegible-v7-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v7-latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v7-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/atkinson-hyperlegible-v7-latin-700italic.svg#AtkinsonHyperlegible') format('svg'); /* Legacy iOS */
 }
