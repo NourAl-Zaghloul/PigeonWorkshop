@@ -15,7 +15,8 @@ div#cardButtons {
     justify-content: space-around;
 }
 
-div#cardButtons > button {
+div#cardButtons > a {
     min-width: 10vw;
-    min-height: 10vh;
+    min-height: 6vh;
+    user-select: none;
 }
