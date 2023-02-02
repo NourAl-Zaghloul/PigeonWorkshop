@@ -1,10 +1,36 @@
 :root {
-    --background-color: #fff1d0;
-    --black-color: #000000;
-    --primary-color: #000000;
-    --a-color: #FC6DAB;/* FC6DAB */
-    --b-color: #3FDE9F; /* 99EDCC */
-    --c-color: #539BF3; /* 9AC4F8 */
+    --light-background: hsl(48, 100%, 96%);
+    --dark-background: hsl(48, 66%, 4%);
+    --light-a: hsl(333, 96%, 66%);/* FC6DAB */
+    --light-b: hsl(160, 96%, 66%); /* 99EDCC */
+    --light-c: hsl(216, 96%, 66%); /* 9AC4F8 */
+    --light-d: #fff;
+    --dark-a: hsl(333, 66%, 33%);/* FC6DAB */
+    --dark-b: hsl(160, 66%, 33%); /* 99EDCC */
+    --dark-c: hsl(216, 66%, 33%); /* 9AC4F8 */
+    --dark-d: #000;
+}
+
+.theme-light {
+    --background-true: var(--light-background);
+    --background-inverse: var(--dark-background);
+    --primary-true: var(--dark-a);
+    --primary-inverse: var(--light-a);
+    --secondary-true: var(--dark-b);
+    --secondary-inverse: var(--light-b);
+    --accent-true: var(--dark-c);
+    --accent-inverse: var(--light-c);
+}
+
+.theme-dark {
+    --background-true: var(--dark-background);
+    --background-inverse: var(--light-background);
+    --primary-true: var(--light-a);
+    --primary-inverse: var(--dark-a);
+    --secondary-true: var(--light-b);
+    --secondary-inverse: var(--dark-b);
+    --accent-true: var(--light-c);
+    --accent-inverse: var(--dark-c);
 }
 
 html {
@@ -12,21 +38,40 @@ html {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    text-align: center;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--background-true);
     overflow: auto;
     display: flex;
     flex-direction: column;
 }
 
-h1, p {
+h1, button, select, input {
+    color: var(--primary-true);
     text-align: center;
 }
 
-iframe {
-    background-color: white;
-    width: 100%;
-    height: 80%;
+h2, h3, h4 {
+    color: var(--secondary-true);
+    border-color: var(--secondary-true);
+}
+
+label, p {
+    color: var(--accent-true);
+    text-align: center;
+}
+
+button, select {
+    background-color: var(--background-true);
+}
+
+button:hover, select:hover {
+    color: var(--primary-inverse);
+    border-color: var(--primary-inverse);
+    background-color: var(--background-inverse);
+    transform: scale(1.2);
+    transition: all .2s ease-out;
 }

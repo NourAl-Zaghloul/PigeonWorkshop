@@ -1,0 +1,21 @@
+div#cardMain {
+    position: absolute;
+    width: 100%;
+    max-width: calc(700px + 10%);
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 3% 5% 3% 5%;
+    box-shadow: hsla(0, 0%, 0%) 0 0 128px;
+    box-sizing: border-box;
+}
+
+div#cardButtons {
+    display: flex;
+    justify-content: space-around;
+}
+
+div#cardButtons > button {
+    min-width: 10vw;
+    min-height: 10vh;
+}
