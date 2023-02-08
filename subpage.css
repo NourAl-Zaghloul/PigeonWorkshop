@@ -37,10 +37,14 @@ div#scrollpage > div#footer {
 }
 
 div#cardButtons > a {
-    min-width: 6%;
-    min-height: 6%;
+    padding: 3%;
+    margin: 1%;
+    text-decoration: none;
     user-select: none;
-    margin: 4%;
+}
+
+div#cardButtons > a.selected {
+    background-color: red;
 }
 
 h2 > a {

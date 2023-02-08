@@ -16,7 +16,7 @@ div#cardButtons {
 }
 
 div#cardButtons > a {
-    min-width: 10vw;
-    min-height: 6vh;
+    padding: 3vh 5vw;
+    text-decoration: none;
     user-select: none;
 }
