@@ -6,7 +6,7 @@ body {
 }
 
 div#navbar {
-    background-color: var(--background-inverse);
+    background-color: var(--reference-dark);
     width: 30%;
     height: 100%;
     display: flex;
@@ -43,8 +43,22 @@ div#cardButtons > a {
     user-select: none;
 }
 
+a {
+    color: var(--accent-color);
+    text-align: center;
+    text-decoration: none;
+    border-width: 0px;
+}
+
+div#cardButtons > a {
+    background-color: var(--reference-light);
+    color: var(--main-color-dark);
+    border: 2px solid var(--accent-color)
+}
+
 div#cardButtons > a.selected {
-    background-color: red;
+    background-color: var(--accent-color-dark);
+    color: var(--main-color-light);
 }
 
 h2 > a {

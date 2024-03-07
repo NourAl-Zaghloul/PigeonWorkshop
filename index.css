@@ -1,37 +1,14 @@
 :root {
-    --light-background: hsl(48, 100%, 96%);
-    --dark-background: hsl(48, 66%, 4%);
-    --light-a: hsl(333, 96%, 66%);/* FC6DAB */
-    --light-b: hsl(160, 96%, 66%); /* 99EDCC */
-    --light-c: hsl(216, 96%, 66%); /* 9AC4F8 */
-    --light-d: #fff;
-    --dark-a: hsl(333, 66%, 33%);/* FC6DAB */
-    --dark-b: hsl(160, 66%, 33%); /* 99EDCC */
-    --dark-c: hsl(216, 66%, 33%); /* 9AC4F8 */
-    --dark-d: #000;
+    --reference-light: hsl(120 100 97);
+	--reference-dark: hsl(120 100 3);
+	--main-color: hsl(30 100 50);
+	--main-color-light: hsl(30 100 83.5);
+	--main-color-dark: hsl(30 100 16.5);
+	--accent-color: hsl(210 100 50);
+	--accent-color-light: hsl(210 100 83.5);
+	--accent-color-dark: hsl(210 100 16.5);
 }
 
-.theme-light {
-    --background-true: var(--light-background);
-    --background-inverse: var(--dark-background);
-    --primary-true: var(--dark-a);
-    --primary-inverse: var(--light-a);
-    --secondary-true: var(--dark-b);
-    --secondary-inverse: var(--light-b);
-    --accent-true: var(--dark-c);
-    --accent-inverse: var(--light-c);
-}
-
-.theme-dark {
-    --background-true: var(--dark-background);
-    --background-inverse: var(--light-background);
-    --primary-true: var(--light-a);
-    --primary-inverse: var(--dark-a);
-    --secondary-true: var(--light-b);
-    --secondary-inverse: var(--dark-b);
-    --accent-true: var(--light-c);
-    --accent-inverse: var(--dark-c);
-}
 
 html {
     height: 100%;
@@ -43,41 +20,44 @@ html {
 }
 
 body {
-    background-color: var(--background-true);
+    background-color: var(--reference-light);
     overflow: auto;
     display: flex;
     flex-direction: column;
 }
 
 h1, button, select, input, a {
-    color: var(--primary-true);
+    color: var(--accent-color);
     text-align: center;
 }
 
 h2, h3, h4 {
-    color: var(--secondary-true);
-    border-color: var(--secondary-true);
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 
 label, p {
-    color: var(--accent-true);
+    color: var(--accent-color);
     text-align: center;
 }
 
 button, select, a {
-    background-color: var(--background-true);
+    background-color: var(--reference-dark);
 }
 
 a {
-    color: var(--secondary-true);
-    border-color: var(--secondary-true);
-    background-color: var(--background-true);
+    color: var(--main-color);
+    border-color: var(--main-color);
+    border: 2px solid;
+    background-color: var(--reference-light);
 }
 
 button:hover, select:hover, a:hover {
-    color: var(--secondary-inverse);
-    border-color: var(--secondary-inverse);
-    background-color: var(--background-inverse);
+    color: var(--main-color);
+    border-color: var(--main-color);
+    background-color: var(--reference-dark);
     transform: scale(1.2);
     transition: all .2s ease-out;
 }
+
+

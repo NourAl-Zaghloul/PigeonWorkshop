@@ -1,3 +1,7 @@
+body {
+    background-color: var(--accent-color-dark);
+}
+
 div#cardMain {
     position: absolute;
     width: 100%;
@@ -8,6 +12,7 @@ div#cardMain {
     padding: 3% 5% 3% 5%;
     box-shadow: hsla(0, 0%, 0%) 0 0 128px;
     box-sizing: border-box;
+    background-color: var(--main-color-light);
 }
 
 div#cardButtons {
