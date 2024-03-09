@@ -47,7 +47,6 @@ button, select, a {
 
 a {
     color: var(--main-color);
-    border-color: var(--main-color);
     border: 2px solid;
     background-color: var(--reference-light);
 }

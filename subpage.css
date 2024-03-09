@@ -44,7 +44,7 @@ div#cardButtons > a {
 }
 
 a {
-    color: var(--accent-color);
+    color: var(--main-color);
     text-align: center;
     text-decoration: none;
     border-width: 0px;
@@ -52,13 +52,14 @@ a {
 
 div#cardButtons > a {
     background-color: var(--reference-light);
-    color: var(--main-color-dark);
-    border: 2px solid var(--accent-color)
+    color: var(--main-color);
+    border: 2px solid var(--main-color)
 }
 
-div#cardButtons > a.selected {
-    background-color: var(--accent-color-dark);
-    color: var(--main-color-light);
+div#cardButtons > a.selected, div#cardButtons > a:hover {
+    background-color: var(--reference-dark);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 h2 > a {

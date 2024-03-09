@@ -5,22 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link rel="stylesheet" href="./index.css">  
         <link rel="stylesheet" href="./subpage.css">  
+        <script src="main.js"></script>
     </head>
-    <body class="theme-light">
+    <body>
         <div id="navbar">
             <h2><a href="index.html">Pigeon Workshop</a></h2>
             <div id="cardButtons">
-                <a class="selected" href="writings.html">Writings</a>
-                <a href="games.html">Games</a>
-                <a href="crafts.html">Crafts</a>
-                <a href="foods.html">Foods</a>
+                <a href="random.html">Random Bullshit</a>
+                <a class="selected" href="curated.html">Curated Bullshit</a>
             </div>
         </div>
         <div id="scrollpage">
-            <div id="main"></div>
+            <div id="main">
+                <label for="selectBullshit">Choose your bullshit:</label>
+                <select name="select" id="selectBullshit">
+                    <option value="">--Please choose an option--</option>
+                    <!--<option value="randomBullshit">random bullshit</option>-->
+                </select>
+                <button onclick="selectBullshit();">Go!</button>
+            </div>
             <div id="footer">
                 <a href="mailto:nourthepigeon@gmail.com:">nourthepigeon@gmail.com</a>
             </div>
         </div>
     </body>
+    <script>curatedBullshit();</script>
 </html>
