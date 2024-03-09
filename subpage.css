@@ -71,14 +71,17 @@ div#main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    font-size: larger;
 }
 
 div#main > button {
-    padding: 6% 1%;
     border-color: var(--accent-color);
+    padding: 3%;
 }
 
 div#main > button:hover {
     border-color: var(--main-color);
     background-color: var(--reference-light);
 }
+
