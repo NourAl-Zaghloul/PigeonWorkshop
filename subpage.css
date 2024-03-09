@@ -66,3 +66,19 @@ h2 > a {
     text-decoration: none;
     background-color: transparent;
 }
+
+div#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#main > button {
+    padding: 6% 1%;
+    border-color: var(--accent-color);
+}
+
+div#main > button:hover {
+    border-color: var(--main-color);
+    background-color: var(--reference-light);
+}
