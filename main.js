@@ -1,5 +1,6 @@
 let bullshit = [
-    {text: "currently only thing here", value: "yup"}
+    {text: "currently only thing here", value: "yup"},
+    {text: "Simple Reliability", value: "CAP_SRP_Reliability"}
 ];
 
 
