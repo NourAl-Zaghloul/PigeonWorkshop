@@ -35,10 +35,10 @@ endButtonPress = function(e){
         LEFTDOWN > 0 ? mouserecorder.left += performance.now() - LEFTDOWN : 0;
         RIGHTDOWN > 0 ? mouserecorder.right += performance.now() - RIGHTDOWN : 0;
         RIGHTDOWN = LEFTDOWN = 0;
-    } else if(e.button === 0){
+    } else if(e.button === 0 & LEFTDOWN > 0){
         mouserecorder.left += performance.now() - LEFTDOWN;
         LEFTDOWN = 0;
-    } else if (e.button === 2){
+    } else if (e.button === 2 & RIGHTDOWN > 0){
         mouserecorder.right += performance.now() - RIGHTDOWN;
         RIGHTDOWN = 0;
     }
