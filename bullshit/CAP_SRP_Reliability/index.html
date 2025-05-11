@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8" />
     <title>Simple Reliability</title>
-    <script src="keyrecorder.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="keyrecorder.js" defer></script>
 </head>
 <body>
-    <p>Press 'Enter' to start recording left and right mouse presses.</p>
-    <p>Once recording, press 'Space' to advance to the next trial.</p>
-    <p>To end the recording, press 'Enter' once more and your results will be available.</p>
-    <p>After you have ended the recording, you can press 'p' to download your results.</p>
+    <div id="Coverup"><h1 id="TrialCounter">Trial 1</h1></div>
+    <h1>Simple Reliability Coder for SRP</h1>
+    <div id="Instructions">
+        <h3>Instructions</h3>
+        <p>Press 'Enter' to start recording left and right mouse presses.</p>
+        <p>Once recording, press 'Space' to advance to the next trial.</p>
+        <p>To end the recording, press 'Enter' once more and your results will be available.</p>
+        <p>After you have ended the recording, you can press 'p' to download your results.</p>
+    </div>
+    <div id="Status">
+        <div id="DataInfo">
+            <h3>Coding Information</h3>
+            <div id="DataInput">
+                <section>
+                    <label for="infoCoder">Coder's Name </label>
+                    <br>
+                    <input id="infoCoder" name="infoCoder" itemtype="text">
+                </section>
+                <section>
+                    <label for="infoParticipant">Participant Code </label>
+                    <br>
+                    <input id="infoParticipant" name="infoParticipant" itemtype="text">
+                </section>
+                <section>
+                    <label for="infoVisit">Visit </label>
+                    <br>
+                    <input id="infoVisit" name="infoVisit" itemtype="text">
+                </section>
+            </div>
+        </div>
+        <div id="RecordingViewer">
+            <h3>Current Status</h3>
+            <p id="RecordingStatus">Recording not started.</p>
+        </div>
+        <!--
+        <div id="RecordingOutput">
+            <h3>Output</h3>
+            <table></table>
+        </div>
+        -->
+    </div>
 </body>
 </html>

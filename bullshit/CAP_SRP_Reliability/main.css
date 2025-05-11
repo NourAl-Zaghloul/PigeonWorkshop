@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+body > div {
+    width: 80%;
+}
+
+div#DataInput > section {
+    padding: 2%;
+}
+div#Status > div {
+    border-top: 1px dashed black  
+}
+
+#RecordingStatus {
+    text-align: center;
+    border: 3px solid black;
+    fill: antiquewhite;
+    padding: 3%;
+}
+
+#DataInput {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Coverup {
+    position: absolute;
+    background-color: rgba(75%, 75%, 75%, 75%);
+    width: 100vw;
+    height: 120vh;
+    display: none;
+    text-align: center;
+}
+
+#TrialCounter {
+    position: relative;
+    left: 0;
+    top: 50%;
+    user-select: none;
+}

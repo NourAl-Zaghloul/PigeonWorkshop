@@ -1,6 +1,6 @@
-// TODO! Download Data
-let session_id = ""; // TODO: Make this usable
-let coder_id = ""; // TODO: Make this usable
+let participant_id = "";
+let visit_id = "";
+let coder_id = "";
 
 // used variables
 let RECORDING = false;
@@ -25,6 +25,8 @@ endtrial = function(){
     mouserecorder.trial += 1;
     mouserecorder.left = 0;
     mouserecorder.right = 0;
+
+    document.getElementById("TrialCounter").innerText = `Trial ${mouserecorder.trial}`
 }
 
 endButtonPress = function(e){
@@ -42,7 +44,14 @@ endButtonPress = function(e){
     }
 }
 
-printCSV = function(content, filename) {
+printCSV = function(content) {
+    // create filename
+    coder_id = document.getElementById("infoCoder").value;
+    participant_id = document.getElementById("infoParticipant").value;
+    visit_id = document.getElementById("infoVisit").value;
+
+    let filename = `Reliability_${coder_id}_${participant_id}_${visit_id}_${new Date().toISOString().replace(/.\d+Z$/g, "Z")}.csv`;
+    
     // Create a blob
     var blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
     var url = URL.createObjectURL(blob);
@@ -54,28 +63,40 @@ printCSV = function(content, filename) {
     pom.click();
   }
 
-
 // Event Listeners
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         RECORDING = !RECORDING;
         if(RECORDING){
+            document.getElementById("Coverup").style.display = "block";
+            document.getElementById("RecordingStatus").style.backgroundColor = "red";
+            document.getElementById("RecordingStatus").innerText = "RECORDING IN PROGRESS!";
+
             output = [];
+
             console.log('recording');
             // TODO! change css to indicate recording is in progress
         } else {
             endtrial();
+
+            mouserecorder.trial = 1;
+
+            document.getElementById("Coverup").style.display = "none";
+            document.getElementById("RecordingStatus").style.backgroundColor = "white";
+            document.getElementById("RecordingStatus").innerText = `Recording has finished for ${document.getElementById("infoCoder").value}'s ${document.getElementById("infoParticipant").value}-${document.getElementById("infoVisit").value}`;
+            document.getElementById("TrialCounter").innerText = `Trial 1`;
+
             console.log('end recording');
-            console.log(output)
+            console.log(output);
             // TODO! Make output visible/downloadable
         }
     } else if (e.key === ' ' & RECORDING) {
         endtrial();
-    } else if (e.key === 'p' & !RECORDING){
+    } else if (e.key === 'p' & !RECORDING & output.length > 0){
         let csvContent = output.map(e => `${e.trial},${e.left},${e.right},\n`);
-        csvContent.unshift("trial,left,right,\n"); //data:text/csv;charset=utf-8,
+        csvContent.unshift("trial,left,right,\n");
         csvContent = csvContent.join("");
-        printCSV(csvContent, `Reliability_${new Date().toISOString().replace(/.\d+Z$/g, "Z")}.csv`)
+        printCSV(csvContent)
     }
 });
 
